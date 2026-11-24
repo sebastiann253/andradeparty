@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Andrade Party · Decoración de eventos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: estudio de ambientación con oficio; cálido, ordenado, poco texto.
+   IDEA: armar tu fiesta como quien arma una mesa dulce: eliges piezas y se arma solo.
+   PICTURE: arco de globos en tonos nude sobre mesa dulce; la temática elegida cambia sus colores.
+   COLOUR and TYPE: lino, arena y café con acentos rosa terracota y salvia; DM Serif Display + DM Sans.
+   LAYOUT: hero editorial, cinta, servicios, cotizador con resumen en vivo, proceso, esferas, preguntas, pie. */
+:root{color-scheme:light;--bg:#f6f1ea;--paper:#fffdf9;--ink:#2b2420;--soft:#766a60;--sand:#ebe1d4;--taupe:#a8927c;--rose:#c4806b;--rose2:#f1ddd4;--sage:#8e9b85;--sage2:#e3e8de;--line:#e4d9cb}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.04;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,4.8vw,52px)}
+p{margin:0}a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto}
+.band{padding:clamp(56px,8vw,108px) max(5vw,20px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:16px}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+.sub{color:var(--soft);margin-top:12px;max-width:44ch;font-size:16.5px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:38px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font:600 15px "DM Sans",sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px}
+.dark{background:var(--ink);color:#fff}.dark:hover{box-shadow:0 12px 26px -14px rgba(43,36,32,.7)}
+.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.wa{background:#1f9d57;color:#fff}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(246,241,234,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:28px;padding:12px max(5vw,20px)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto;white-space:nowrap}
+.logo i{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:400 17px "DM Serif Display";font-style:normal}
+.logo b{font-family:"DM Serif Display",serif;font-weight:400;font-size:22px;line-height:1}
+.logo small{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:500}.links a{text-decoration:none;color:var(--soft)}.links a:hover{color:var(--ink)}
+nav .btn{min-height:42px;padding:0 20px;font-size:14px;white-space:nowrap}
+@media(max-width:780px){.links{display:none}}
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,70px);align-items:center}
+.hero h1{font-size:clamp(48px,7vw,86px)}
+.hero h1 em{color:var(--rose)}
+.hero .sub{margin:22px 0 32px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:30px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);flex-wrap:wrap;font-size:13.5px;color:var(--soft)}
+.facts b{display:block;font:400 26px "DM Serif Display";color:var(--ink)}
+.stage{position:relative;background:var(--sand);border-radius:240px 240px 28px 28px;padding:24px 10px 0;overflow:hidden}
+.stage::after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.6);border-radius:230px 230px 20px 20px;pointer-events:none}
+.scene{width:100%;height:auto;display:block;max-height:520px}
+#garland{transform-origin:260px 330px}
+@media(prefers-reduced-motion:no-preference){#garland{animation:sway 7s ease-in-out infinite}@keyframes sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}#garland circle{transition:fill .6s}#cloth,#cake{transition:fill .6s}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.stage{max-width:460px;width:100%;justify-self:center;order:-1}}
+/* ribbon */
+.ribbon{background:var(--ink);color:var(--sand);overflow:hidden;padding:16px 0}
+.ribbon div{display:flex;width:max-content;font:italic 400 22px "DM Serif Display";white-space:nowrap}
+.ribbon span{padding:0 26px}
+.ribbon span::after{content:"✦";font-style:normal;font-size:12px;color:var(--rose);margin-left:52px;vertical-align:middle}
+@media(prefers-reduced-motion:no-preference){.ribbon div{animation:mq 30s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}}
+/* services */
+.svcs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media(max-width:960px){.svcs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.svcs{grid-template-columns:minmax(0,1fr)}}
+.card{position:relative;display:flex;flex-direction:column;gap:14px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px;cursor:pointer;font:inherit;color:var(--ink);transition:border-color .2s,transform .2s,background .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--taupe)}
+.card .ic{width:54px;height:54px;border-radius:16px;background:var(--rose2);display:grid;place-items:center}
+.card .ic svg{width:28px;height:28px;stroke:var(--rose);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:25px}
+.card p{color:var(--soft);font-size:14.5px;flex:1}
+.card .add{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--line);font-size:13px;font-weight:700}
+.card .add i{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-style:normal;transition:.2s}
+.card[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.card[aria-pressed=true] p{color:#d9cfc4}
+.card[aria-pressed=true] .add{border-color:rgba(255,255,255,.16)}
+.card[aria-pressed=true] .add i{background:var(--rose);border-color:var(--rose);color:#fff}
+.card[aria-pressed=true] .ic{background:rgba(255,255,255,.1)}
+.card[aria-pressed=true] .ic svg{stroke:#f1ddd4}
+/* builder */
+.builder{background:var(--paper);border-block:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(24px,4vw,48px);align-items:start}
+@media(max-width:880px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.q{display:flex;align-items:baseline;gap:12px;font:400 25px "DM Serif Display";margin:32px 0 14px}
+.q:first-child{margin-top:0}
+.q b{font:700 12px "DM Sans";color:var(--rose);letter-spacing:.15em}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--bg);font:600 14px "DM Sans";color:var(--ink);cursor:pointer;transition:.2s}
+.pill[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px 0 12px;border-radius:999px;font:600 14px "DM Sans";background:var(--bg);border:1px solid var(--line);cursor:pointer;color:var(--ink);transition:.2s}
+.chip i{display:flex}
+.chip i span{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--bg);margin-left:-5px}
+.chip i span:first-child{margin-left:0}
+.chip[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:#fff}
+.chip[aria-pressed=true] i span{border-color:var(--ink)}
+.fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+@media(max-width:520px){.fields{grid-template-columns:minmax(0,1fr)}}
+label{display:grid;gap:6px;font-weight:600;font-size:13px;color:var(--soft)}
+input,select{font:16px "DM Sans",sans-serif;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-height:50px;width:100%}
+input:focus,select:focus{border-color:var(--taupe);outline:none}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:14px;background:var(--bg);min-height:50px}
+.stepper button{width:50px;height:48px;border:0;background:none;font:500 22px "DM Sans";color:var(--rose);cursor:pointer}
+.stepper output{flex:1;text-align:center;font-weight:700;color:var(--ink)}
+.ticket{position:sticky;top:96px;background:var(--ink);color:#efe7de;border-radius:26px;padding:28px;display:grid;gap:16px;overflow:hidden}
+.ticket::before{content:"";position:absolute;right:-70px;top:-70px;width:190px;height:190px;border-radius:50%;border:1px solid rgba(196,128,107,.35)}
+.ticket h3{font-size:30px;color:#fff}
+.ticket dl{margin:0;display:grid;gap:10px}
+.ticket dl div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:10px;font-size:14px}
+.ticket dt{opacity:.6}.ticket dd{margin:0;font-weight:600;text-align:right}
+.prog{display:flex;justify-content:space-between;font-size:12.5px;opacity:.75}
+.bar{height:4px;border-radius:9px;background:rgba(255,255,255,.12);overflow:hidden}
+.bar span{display:block;height:100%;background:var(--rose);transition:width .35s;width:0}
+.ticket .btn{width:100%}
+.ticket small{opacity:.6;font-size:12.5px;text-align:center}
+.done{display:none;background:#3a312c;border-radius:16px;padding:14px;font-size:14px;white-space:pre-line}
+.done.on{display:block}
+/* process */
+.proc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:p}
+@media(max-width:760px){.proc{grid-template-columns:minmax(0,1fr)}}
+.proc div{padding:28px;border-radius:22px;background:var(--sage2);position:relative}
+.proc div::before{counter-increment:p;content:"0" counter(p);font:400 46px "DM Serif Display";color:var(--sage);display:block;line-height:1;margin-bottom:18px}
+.proc h3{font-size:24px;margin-bottom:6px}
+.proc p{color:var(--soft);font-size:14.5px}
+/* esferas */
+.xmas{background:#6f2f2a;color:#fff}
+.xmas .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,60px);align-items:center}
+.xmas .eyebrow{color:#e8b9a8}
+.xmas .sub{color:rgba(255,255,255,.78)}
+.xmas label{color:rgba(255,255,255,.8);max-width:340px;margin-top:26px}
+.xmas input{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff}
+.fin{display:flex;gap:8px;margin:16px 0 26px;flex-wrap:wrap}
+.fin button{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:600 14px "DM Sans";cursor:pointer}
+.fin button[aria-pressed=true]{background:#fff;color:#6f2f2a;border-color:#fff}
+.xmas .btn{background:#fff;color:#6f2f2a}
+.ball{width:100%;max-width:320px;height:auto;justify-self:center}
+@media(max-width:820px){.xmas .wrap{grid-template-columns:minmax(0,1fr)}.ball{max-width:220px;order:-1}}
+/* faq */
+.faq{max-width:780px}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font:400 22px "DM Serif Display";padding:20px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 24px "DM Sans";color:var(--rose);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--soft);padding-bottom:20px;max-width:62ch}
+footer{background:var(--ink);color:#d9cfc4;padding:64px max(5vw,20px) 40px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:30px;align-items:end}
+footer h2{color:#fff}
+footer h2 em{color:var(--rose)}
+footer .meta{display:grid;gap:8px;justify-items:end;text-align:right;font-size:14px}
+footer .demo{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:12px;opacity:.55}
+@media(max-width:700px){footer .wrap{grid-template-columns:minmax(0,1fr)}footer .meta{justify-items:start;text-align:left}}
+.float{position:fixed;right:18px;bottom:18px;z-index:20;width:58px;height:58px;border-radius:50%;background:#1f9d57;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.22)}
+.float svg{width:30px;height:30px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+@media(max-width:600px){.ctas .btn{flex:1}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#inicio"><i>A</i><span><b>Andrade Party</b><small>Decoración de eventos</small></span></a>
+  <div class="links"><a href="#servicios">Servicios</a><a href="#arma">Cotizar</a><a href="#navidad">Navidad</a><a href="#preguntas">Preguntas</a></div>
+  <a class="btn dark" href="#arma">Cotizar</a>
+</div></nav>
+
+<header class="hero band" id="inicio"><div class="wrap">
+  <div>
+    <span class="eyebrow">Santiago · Decoración y candy bar</span>
+    <h1>Celebraciones con <em>detalle.</em></h1>
+    <p class="sub">Globos, mesas dulces y ambientación a la medida de tu evento. Arma tu fiesta y cotiza en un minuto.</p>
+    <div class="ctas"><a class="btn dark" href="#arma">Armar mi fiesta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="#servicios">Ver servicios</a></div>
+    <div class="facts"><div><b>4</b>servicios</div><div><b>9</b>temáticas</div><div><b>1 min</b>para cotizar</div></div>
+  </div>
+  <div class="stage">
+  <svg class="scene" viewBox="0 0 520 440" role="img" aria-label="Arco de globos sobre una mesa dulce con torta">
+    <defs>
+      <radialGradient id="sh" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".14"/></radialGradient>
+      <pattern id="st" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="10" height="20" fill="#fffdf9"/><rect x="10" width="10" height="20" fill="#f3ece3"/></pattern>
+    </defs>
+    <ellipse cx="260" cy="428" rx="220" ry="12" fill="#2b2420" opacity=".08"/>
+    <path d="M140 400V190a120 120 0 0 1 240 0v210z" fill="url(#st)" stroke="#e4d9cb" stroke-width="3"/>
+    <text x="260" y="215" text-anchor="middle" font-family="DM Serif Display,serif" font-style="italic" font-size="32" fill="#c4806b">¡Feliz día!</text>
+    <g id="garland"></g>
+    <rect x="95" y="330" width="330" height="16" rx="5" fill="#fffdf9" stroke="#e4d9cb" stroke-width="2"/>
+    <path id="cloth" d="M100 346h320v74H100z" fill="#d9c6b3"/>
+    <rect x="222" y="292" width="76" height="38" rx="8" fill="#fffdf9" stroke="#e4d9cb" stroke-width="2"/>
+    <rect id="cake" x="232" y="262" width="56" height="32" rx="8" fill="#f1ddd4"/>
+    <rect x="232" y="262" width="56" height="8" rx="4" fill="#fff" opacity=".7"/>
+    <rect x="258" y="244" width="5" height="18" fill="#d8b98a"/><ellipse cx="260.5" cy="240" rx="4" ry="6" fill="#e0a25a"/>
+    <g transform="translate(140 272)"><rect width="46" height="58" rx="10" fill="#fff" opacity=".85" stroke="#e4d9cb" stroke-width="2"/><rect x="6" y="-8" width="34" height="10" rx="3" fill="#a8927c"/><circle cx="14" cy="40" r="7" fill="#c4806b"/><circle cx="30" cy="44" r="7" fill="#e8d5c4"/><circle cx="22" cy="28" r="7" fill="#8e9b85"/></g>
+    <g transform="translate(334 286)"><rect width="42" height="44" rx="10" fill="#fff" opacity=".85" stroke="#e4d9cb" stroke-width="2"/><rect x="5" y="-8" width="32" height="10" rx="3" fill="#c4806b"/><rect x="8" y="18" width="8" height="20" rx="4" fill="#e8c3b4"/><rect x="18" y="14" width="8" height="24" rx="4" fill="#8e9b85"/><rect x="28" y="20" width="8" height="18" rx="4" fill="#d8b98a"/></g>
+  </svg>
+  </div>
+</div></header>
+
+<div class="ribbon" aria-hidden="true"><div id="rib"></div></div>
+
+<section class="band" id="servicios"><div class="wrap">
+  <div class="head reveal"><div><span class="eyebrow">Servicios</span><h2>Todo para tu celebración</h2></div><p class="sub" style="margin:0">Toca los que necesites. Se suman a tu cotización.</p></div>
+  <div class="svcs reveal" id="svc"></div>
+</div></section>
+
+<section class="band builder" id="arma"><div class="wrap">
+  <div class="head reveal"><div><span class="eyebrow">Cotizador</span><h2>Arma tu fiesta</h2></div></div>
+  <div class="grid2">
+    <div class="reveal">
+      <div class="q"><b>01</b>Servicios</div>
+      <div class="pills" id="pills"></div>
+      <div class="q"><b>02</b>Temática</div>
+      <div class="pills" id="themes"></div>
+      <div class="q"><b>03</b>Tu evento</div>
+      <div class="fields">
+        <label>Tipo de evento<select id="tip"><option>Cumpleaños</option><option>Baby shower</option><option>Bautizo</option><option>Revelación</option><option>Aniversario</option><option>Otro</option></select></label>
+        <label>Fecha<input id="fec" type="date"></label>
+        <label>Comuna<input id="com" placeholder="Ej: Maipú"></label>
+        <div><label for="invOut" style="margin-bottom:6px">Invitados</label>
+          <div class="stepper"><button type="button" id="minus" aria-label="Menos invitados">−</button><output id="invOut">20</output><button type="button" id="plus" aria-label="Más invitados">+</button></div></div>
+        <label style="grid-column:1/-1">Tu nombre<input id="nom" autocomplete="given-name" placeholder="Tu nombre"></label>
+      </div>
+    </div>
+    <aside class="ticket reveal" aria-live="polite">
+      <span class="eyebrow" style="margin:0;color:#e2a893">Tu cotización</span>
+      <h3>Tu fiesta</h3>
+      <div class="prog"><span>Completado</span><span id="pct">0%</span></div>
+      <div class="bar"><span id="prog"></span></div>
+      <dl id="sum"></dl>
+      <button class="btn wa" type="button" id="send"><svg viewBox="0 0 32 32"><path fill="#fff" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6z"/></svg>Cotizar por WhatsApp</button>
+      <small>Te respondemos con opciones y valores.</small>
+      <div class="done" id="done"></div>
+    </aside>
+  </div>
+</div></section>
+
+<section class="band" id="proceso"><div class="wrap">
+  <div class="head reveal"><div><span class="eyebrow">Cómo trabajamos</span><h2>Simple, de principio a fin</h2></div></div>
+  <div class="proc reveal">
+    <div><h3>Cotizas</h3><p>Eliges servicios y temática aquí, y nos llega todo por WhatsApp.</p></div>
+    <div><h3>Diseñamos</h3><p>Te proponemos colores, piezas y valores para tu evento.</p></div>
+    <div><h3>Montamos</h3><p>Llegamos el día de tu fiesta y dejamos todo listo.</p></div>
+  </div>
+</div></section>
+
+<section class="xmas band" id="navidad"><div class="wrap">
+  <div class="reveal">
+    <span class="eyebrow">Temporada navideña</span>
+    <h2>Esferas con nombre</h2>
+    <p class="sub">Escribe un nombre y mira cómo queda.</p>
+    <label for="xn">Nombre<input id="xn" maxlength="10" value="Sofía"></label>
+    <div class="fin" id="fin"><button type="button" aria-pressed="true" data-f="matte">Matte</button><button type="button" aria-pressed="false" data-f="brillo">Brillante</button><button type="button" aria-pressed="false" data-f="escarcha">Escarchado</button></div>
+    <button class="btn" type="button" id="xadd">Agregar a mi cotización</button>
+  </div>
+  <svg class="ball" viewBox="0 0 120 130" role="img" aria-label="Vista previa de la esfera">
+    <defs><pattern id="gl" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#a8322e"/><circle cx="2" cy="2" r="1" fill="#e48a7f"/><circle cx="5" cy="5" r=".8" fill="#fff" opacity=".6"/></pattern></defs>
+    <path d="M60 2v20" stroke="#e8d5c4" stroke-width="1.5"/><rect x="50" y="20" width="20" height="12" rx="3" fill="#c9a86a"/>
+    <circle id="bb" cx="60" cy="80" r="46" fill="#a8322e"/><circle id="bs" cx="60" cy="80" r="46" fill="url(#sh)" opacity="0"/>
+    <text id="bt" x="60" y="88" text-anchor="middle" font-family="DM Serif Display,serif" font-style="italic" font-size="20" fill="#fff">Sofía</text>
+  </svg>
+</div></section>
+
+<section class="band" id="preguntas"><div class="wrap">
+  <div class="head reveal"><div><span class="eyebrow">Preguntas</span><h2>Antes de reservar</h2></div></div>
+  <div class="faq reveal" id="faq"></div>
+</div></section>
+
+<footer><div class="wrap">
+  <h2>Hagamos tu próxima<br><em>celebración.</em></h2>
+  <div class="meta"><a class="btn wa" href="https://wa.me/message/5MRMIUPQLVUYO1" target="_blank" rel="noopener">Escribir por WhatsApp</a><span>Santiago, Chile</span><a href="https://www.instagram.com/andradeparty.cl/" target="_blank" rel="noopener">@andradeparty.cl</a></div>
+  <div class="demo">Sitio de muestra · Diseñado por web.ia studio</div>
+</div></footer>
+
+<a class="float" href="https://wa.me/message/5MRMIUPQLVUYO1" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path fill="#fff" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg></a>
+
+<script>
+{
+const WA='https://wa.me/message/5MRMIUPQLVUYO1';
+const $=id=>document.getElementById(id);
+const esc=s=>s.replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';');
+const svcs=[
+ ["Decoración","Arcos de globos, paneles y montaje completo.",'<circle cx="10" cy="9" r="5"/><circle cx="17" cy="12" r="4"/><path d="M10 14v7M17 16v5"/>'],
+ ["Candy Bar","Mesa dulce armada según tu temática.",'<path d="M3 20h18M5 20V11h14v9"/><path d="M8 11V7h3v4M13 11V5h3v6"/>'],
+ ["Desayuno sorpresa","Para regalar en cumpleaños y fechas especiales.",'<rect x="3" y="9" width="18" height="11" rx="2"/><path d="M12 9v11M3 13h18M12 9c-2-4-6-3-5 0M12 9c2-4 6-3 5 0"/>'],
+ ["Papelería","Toppers, cajitas, banderines y recuerdos.",'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/>']];
+const themes=[["Princesas","#e9a6b8","#e4c07a","#efe0f2"],["Superhéroes","#c0392b","#2c4f8f","#e4c07a"],["Fútbol","#3f7d4f","#ffffff","#2b2420"],["Unicornio","#c9b8e3","#f2cfd9","#bfe3da"],["Safari","#9a7650","#a7b47a","#ead7a8"],["Sirenas","#7cc3b8","#a99ad0","#efc1cf"],["Baby shower","#c9d8e8","#efd3d6","#ffffff"],["Dinosaurios","#7d9a55","#d98a4b","#ead98a"],["Otra","#c4806b","#a8927c","#8e9b85"]];
+const NUDE=['#e8d5c4','#c4806b','#f3ece3','#a8927c','#ffffff','#d8b98a','#8e9b85','#efd3c8'];
+const sel=new Set();let theme=-1,inv=20,esfera='';
+$('svc').innerHTML=svcs.map(([t,d,ic],i)=>`<button type="button" class="card" aria-pressed="false" data-i="${i}"><span class="ic"><svg viewBox="0 0 24 24">${ic}</svg></span><h3>${t}</h3><p>${d}</p><span class="add"><span class="lbl">Agregar</span><i>+</i></span></button>`).join('');
+$('pills').innerHTML=svcs.map(([t],i)=>`<button type="button" class="pill" aria-pressed="false" data-i="${i}">${t}</button>`).join('');
+$('themes').innerHTML=themes.map(([t,a,b,c],i)=>`<button type="button" class="chip" aria-pressed="false" data-t="${i}"><i><span style="background:${a}"></span><span style="background:${b}"></span><span style="background:${c}"></span></i>${t}</button>`).join('');
+const words=['Arcos de globos','Candy bar','Desayunos sorpresa','Papelería','Baby shower','Cumpleaños','Esferas navideñas'];
+$('rib').innerHTML=[...words,...words].map(w=>`<span>${w}</span>`).join('');
+const g=$('garland');
+const paint=cols=>{let h='';const ring=(r,n,size,off)=>{for(let i=0;i<n;i++){const a=Math.PI*(1.08-(i/(n-1))*1.16);const x=260+Math.cos(a)*r,y=330-Math.sin(a)*r*1.05;const s=size*(0.8+((i*7+off)%5)/10);const c=cols[(i*3+off)%cols.length];h+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${s.toFixed(1)}" fill="${c}"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${s.toFixed(1)}" fill="url(#sh)"/>`}};
+ ring(205,15,25,0);ring(178,13,17,2);ring(228,11,13,4);g.innerHTML=h};
+paint(NUDE);
+const toggle=i=>{sel.has(i)?sel.delete(i):sel.add(i);
+ for(const b of document.querySelectorAll(`.card[data-i="${i}"],.pill[data-i="${i}"]`)){b.setAttribute('aria-pressed',sel.has(i));const l=b.querySelector('.lbl');if(l)l.textContent=sel.has(i)?'Agregado':'Agregar';const ic=b.querySelector('.add i');if(ic)ic.textContent=sel.has(i)?'✓':'+'}
+ render()};
+$('svc').addEventListener('click',e=>{const b=e.target.closest('.card');if(b)toggle(+b.dataset.i)});
+$('pills').addEventListener('click',e=>{const b=e.target.closest('.pill');if(b)toggle(+b.dataset.i)});
+const val=id=>$(id).value.trim();
+const fmtD=v=>v?new Date(v+'T12:00').toLocaleDateString('es-CL',{weekday:'short',day:'numeric',month:'short'}):'';
+const rows=()=>[["Servicios",[...sel].sort().map(i=>svcs[i][0]).concat(esfera?[esfera]:[]).join(', ')],["Temática",theme<0?'':themes[theme][0]],["Evento",val('tip')],["Fecha",fmtD(val('fec'))],["Comuna",val('com')],["Invitados",String(inv)],["Nombre",val('nom')]];
+const render=()=>{
+ $('sum').innerHTML=rows().map(([k,v])=>`<div><dt>${k}</dt><dd>${v?esc(v):'—'}</dd></div>`).join('');
+ const need=[sel.size||esfera,theme>=0,val('fec'),val('com'),val('nom')];
+ const p=Math.round(need.filter(Boolean).length/need.length*100);
+ $('prog').style.width=p+'%';$('pct').textContent=p+'%'};
+$('themes').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;theme=+b.dataset.t;
+ for(const c of $('themes').children)c.setAttribute('aria-pressed',c===b);
+ const [,a,bb,c]=themes[theme];paint([a,bb,c,a,'#ffffff',bb,'#f3ece3']);$('cloth').setAttribute('fill',a);$('cake').setAttribute('fill',bb);render()});
+$('minus').onclick=()=>{inv=Math.max(5,inv-5);$('invOut').textContent=inv;render()};
+$('plus').onclick=()=>{inv=Math.min(300,inv+5);$('invOut').textContent=inv;render()};
+$('fec').min=new Date().toISOString().slice(0,10);
+for(const id of ['tip','fec','com','nom'])$(id).addEventListener('input',render);
+$('send').addEventListener('click',async()=>{
+ const d=$('done');
+ if(!sel.size&&!esfera){d.textContent='Elige al menos un servicio.';d.classList.add('on');return}
+ if(!val('nom')||!val('fec')){d.textContent='Completa tu nombre y la fecha.';d.classList.add('on');return}
+ const t='¡Hola Andrade Party! Quiero cotizar:\n'+rows().filter(r=>r[1]).map(([k,v])=>`• ${k}: ${v}`).join('\n');
+ let ok=false;try{await navigator.clipboard.writeText(t);ok=true}catch(_){}
+ d.textContent=(ok?'✔ Mensaje copiado. Pégalo en WhatsApp:\n\n':'Copia este mensaje y envíalo por WhatsApp:\n\n')+t;d.classList.add('on');
+ const a=document.createElement('a');a.href=WA;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove()});
+const fins={matte:['#a8322e',0],brillo:['#b8403a',1],escarcha:['url(#gl)',0]};
+$('fin').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;for(const c of $('fin').children)c.setAttribute('aria-pressed',c===b);
+ const [f,s]=fins[b.dataset.f];$('bb').setAttribute('fill',f);$('bs').setAttribute('opacity',s)});
+$('xn').addEventListener('input',e=>{$('bt').textContent=e.target.value||'Tu nombre'});
+$('xadd').addEventListener('click',()=>{const n=val('xn')||'nombre';const f=$('fin').querySelector('[aria-pressed=true]').textContent;
+ esfera=`Esfera "${n}" (${f})`;render();$('arma').scrollIntoView({behavior:'smooth'})});
+const faq=[["¿A qué comunas llegan?","Trabajamos en Santiago. Indica tu comuna en el cotizador y te confirmamos."],["¿Con cuánta anticipación reservo?","Mientras antes, mejor, sobre todo en temporada. Cotiza y te decimos si tu fecha está disponible."],["¿Puedo elegir colores distintos a la temática?","Sí. Cuéntanos tu idea por WhatsApp y armamos la paleta contigo."],["¿Cómo se paga?","Te enviamos los detalles junto con la cotización."]];
+$('faq').innerHTML=faq.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+render();
+}
+</script>
+</body>
+</html>
